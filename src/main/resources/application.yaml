@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: FirstLab
+  web:
+    resources:
+      add-mappings: false
+  datasource:
+    url: jdbc:postgresql://localhost:23210/habrdb
+    username: user
+    password: user
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        use_sql_comments: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/test
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/test
+            user-name-attribute: preferred_username
+        registration:
+          keycloak:
+            client-id: springsecurity
+            client-secret: qI06HgS8S1geBuHgBUCsxfe7D2ToPd6e
+            scope: openid
+
+server:
+  error:
+    whitelabel:
+      enabled: true
+  port: 8081
