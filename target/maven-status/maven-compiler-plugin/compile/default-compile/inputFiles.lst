@@ -1,6 +1,8 @@
 /Users/jaba/IdeaProjects/FistLab_Backend/src/main/java/is/fistlab/utils/PasswordProcessing.java
 /Users/jaba/IdeaProjects/FistLab_Backend/src/main/java/is/fistlab/services/impl/PersonServiceImpl.java
+/Users/jaba/IdeaProjects/FistLab_Backend/src/main/java/is/fistlab/security/SecurityConfig.java
 /Users/jaba/IdeaProjects/FistLab_Backend/src/main/java/is/fistlab/database/repositories/PersonRepository.java
+/Users/jaba/IdeaProjects/FistLab_Backend/src/main/java/is/fistlab/security/JwtProcessing.java
 /Users/jaba/IdeaProjects/FistLab_Backend/src/main/java/is/fistlab/exceptions/dataBaseExceptions/person/PersonNotExistException.java
 /Users/jaba/IdeaProjects/FistLab_Backend/src/main/java/is/fistlab/utils/JwtUtils.java
 /Users/jaba/IdeaProjects/FistLab_Backend/src/main/java/is/fistlab/exceptions/exceptionHandlers/MappersExceptionHandler.java

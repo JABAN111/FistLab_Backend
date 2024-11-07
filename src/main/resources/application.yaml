@@ -5,7 +5,7 @@ spring:
     resources:
       add-mappings: false
   datasource:
-    url: jdbc:postgresql://localhost:23210/habrdb
+    url: jdbc:postgresql://localhost:23210/keycloakdb
     username: user
     password: user
   jpa:
@@ -32,6 +32,14 @@ spring:
             client-id: springsecurity
             client-secret: qI06HgS8S1geBuHgBUCsxfe7D2ToPd6e
             scope: openid
+
+
+
+
+
+keycloak:
+  auth-server-url: http://localhost:8080/realms/test
+
 
 server:
   error:

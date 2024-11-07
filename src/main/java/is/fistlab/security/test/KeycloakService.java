@@ -1,27 +1,27 @@
-//package is.fistlab.security.test;
-//
-//import lombok.extern.slf4j.Slf4j;
-//import org.springframework.beans.factory.annotation.Value;
-//import org.springframework.http.ResponseEntity;
-//import org.springframework.stereotype.Service;
-//import org.springframework.util.LinkedMultiValueMap;
-//import org.springframework.util.MultiValueMap;
-//import org.springframework.web.client.RestTemplate;
-//
-//import java.util.Map;
-//
-//@Slf4j
-//@Service
-//public class KeycloakService {
-//
-//    @Value("${keycloak.auth-server-url}")
-//    private String authServerUrl;
-//
+package is.fistlab.security.test;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.RestTemplate;
+
+import java.util.Map;
+
+@Slf4j
+@Service
+public class KeycloakService {
+
+    @Value("${keycloak.auth-server-url}")
+    private String authServerUrl;
+
 //    @Value("${keycloak.realm}")
 //    private String realm;
-//
-//    @Value("${keycloak.client-id}")
-//    private String clientId;
+
+    @Value("${keycloak.client-id:default}")
+    private String clientId;
 //
 //    @Value("${keycloak.client-secret}")
 //    private String clientSecret;
@@ -44,4 +44,4 @@
 //        log.info("response: {}",response.getBody());
 //        return (String) response.getBody().get("access_token");
 //    }
-//}
+}

@@ -1,0 +1,17 @@
+@startuml
+actor User
+participant "Client (Browser)" as Client
+participant "Keycloak (Auth Server)" as Keycloak
+participant "Spring Application\n(Resource Server)" as SpringApp
+
+User -> Client: Register / Login
+Client -> Keycloak: Send credentials
+Keycloak -> Client: Return Access & Refresh Tokens
+
+User -> Client: Access protected endpoint
+Client -> SpringApp: Send request with Access Token
+SpringApp -> Keycloak: Verify Access Token
+Keycloak -> SpringApp: Token valid?
+SpringApp -> SpringApp: Check user's roles
+SpringApp -> Client: Allow access (if authorized)
+@enduml
